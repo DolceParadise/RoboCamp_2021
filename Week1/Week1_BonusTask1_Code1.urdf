@@ -1,0 +1,187 @@
+<robot name="multipleshapes">
+ <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+<link name="main_body">
+    <visual>
+      <geometry>
+        <box size="2.0 1.0 0.25"/>
+      </geometry>
+      <material name="blue"/>
+      <!-- <origin xyz="0.0 0.0 2.5" rpy="0.0 0.0 0.0"/> -->
+    </visual>
+</link>
+
+ <link name="bleg1">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.75"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0.0 0.0 -0.375" rpy="0.0 0.0 0.0"/>
+    </visual>
+  </link>  
+
+
+<link name="lleg1">
+  <visual>
+    <geometry>
+      <cylinder radius="0.1" length="0.65"/>
+    </geometry>
+    <material name="white"/>
+    <origin xyz="0.7 0 -0.3" rpy="0.0 0.0 0.0"/>   
+  </visual>  
+</link>
+
+<joint name="Bjoint_1" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="main_body"/>
+    <child link="bleg1"/>
+   <origin rpy ="0 -0.785 0" xyz = "0.5 0.35 0.0"/>
+   
+</joint>
+
+<joint name="Ljoint_1" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="bleg1"/>
+    <child link="lleg1"/>
+   <origin rpy ="0 1.57 0" xyz = "0 0 0.0"/>
+   
+</joint>
+
+
+
+ <link name="bleg2">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.75"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0.0 0.0 -0.375" rpy="0.0 0.0 0.0"/>
+    </visual>
+  </link>  
+
+
+<link name="lleg2">
+  <visual>
+    <geometry>
+      <cylinder radius="0.1" length="0.65"/>
+    </geometry>
+    <material name="white"/>
+    <origin xyz="0.7 0 -0.3" rpy="0.0 0.0 0.0"/>   
+  </visual>  
+</link>
+
+<joint name="Bjoint_2" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="main_body"/>
+    <child link="bleg2"/>
+   <origin rpy ="0 -0.785 0" xyz = "-0.8 0.35 0.0"/>
+   
+</joint>
+
+<joint name="Ljoint_2" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="bleg2"/>
+    <child link="lleg2"/>
+   <origin rpy ="0 1.57 0" xyz = "0 0 0.0"/>
+   
+</joint>
+
+
+
+
+ <link name="bleg3">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.75"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0.0 0.0 -0.375" rpy="0.0 0.0 0.0"/>
+    </visual>
+  </link>  
+
+
+<link name="lleg3">
+  <visual>
+    <geometry>
+      <cylinder radius="0.1" length="0.65"/>
+    </geometry>
+    <material name="white"/>
+    <origin xyz="0.7 0 -0.3" rpy="0.0 0.0 0.0"/>   
+  </visual>  
+</link>
+
+<joint name="Bjoint_3" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="main_body"/>
+    <child link="bleg3"/>
+   <origin rpy ="0 -0.785 0" xyz = "-0.8 -0.35 0.0"/>
+   
+</joint>
+
+<joint name="Ljoint_3" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="bleg3"/>
+    <child link="lleg3"/>
+   <origin rpy ="0 1.57 0" xyz = "0 0 0.0"/>
+   
+</joint>
+
+
+<link name="bleg4">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.75"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0.0 0.0 -0.375" rpy="0.0 0.0 0.0"/>
+    </visual>
+  </link>  
+
+
+<link name="lleg4">
+  <visual>
+    <geometry>
+      <cylinder radius="0.1" length="0.65"/>
+    </geometry>
+    <material name="white"/>
+    <origin xyz="0.7 0 -0.3" rpy="0.0 0.0 0.0"/>   
+  </visual>  
+</link>
+
+<joint name="Bjoint_4" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="main_body"/>
+    <child link="bleg4"/>
+   <origin rpy ="0 -0.785 0" xyz = "0.5 -0.35 0.0"/>
+   
+</joint>
+
+<joint name="Ljoint_4" type="revolute">
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+    <axis xyz="1 0 0"/>
+    <parent link="bleg4"/>
+    <child link="lleg4"/>
+   <origin rpy ="0 1.57 0" xyz = "0 0 0.0"/>
+   
+</joint>
+
+</robot>
